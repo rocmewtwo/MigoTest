@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}小毛頭 - 新增顧客資料{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#birth").datepicker({
+      firstDay: 0,
+      changeMonth: true,
+      changeYear: true
+    });
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-9">
+      <form action="/addUser">
+        <div class="form-group row">
+          <label class="col-3 col-form-label col-form-label-lg">新增顧客資料</label>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-2 col-form-label col-form-label-lg text-right">名稱：</label>
+          <div class="col-8">
+            <input type="text" class="form-control" id="name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="homePhone" class="col-2 col-form-label col-form-label-lg text-right">住家電話：</label>
+          <div class="col-8">
+            <input type="text" class="form-control form-control-lg" id="homePhone">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="cellPhone" class="col-2 col-form-label col-form-label-lg text-right">手機：</label>
+          <div class="col-8">
+            <input type="text" class="form-control form-control-lg" id="cellPhone">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="birth" class="col-2 col-form-label col-form-label-lg text-right">生日：</label>
+          <div class="col-8">
+            <input type="text" class="form-control form-control-lg" id="birth">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="address" class="col-2 col-form-label col-form-label-lg text-right">地址：</label>
+          <div class="col-8">
+            <input type="text" class="form-control form-control-lg" id="address">
+          </div>
+        </div>
+        <div class="form-group row">
+          <button type="submit" class="btn btn-lg btn-block btn-primary">確認</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
